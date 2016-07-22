@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Trail Counts</title>	
+
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    
+</head>
+<body>
+	<!--scripts-->
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
+    <script type="text/javascript" src="//library.oregonmetro.gov/libraries/chartjs/Chart.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script type ="text/javascript" src="trailcountsALL.js"></script>
+    <!--script type ="text/javascript" src="wkend_overview.js"></script-->
+    <script type ="text/javascript" src="trafx.js"></script>
+    <script src="slider.js"></script>
+
+<table width="100%" style="height: 100%;">    
+    <!-- ============ HEADER SECTION ============== -->
+    <tr>
+        <td>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+              <a class="navbar-brand" href="http://www.oregonmetro.gov/intertwine-trail-counts-and-survey-data" target="_blank">Metro Trail Counts</a>
+        </nav>
+        </td>
+    </tr>
+    <br><br><br>
+    <!--============== LEFT PANEL =================== -->
+    <tr>
+        <td width="100%" valign="top" align="center" bgcolor="#ffffff">    
+            <div id="map"></div> 
+            <div id="year"><b>Year</b> 2008</div>
+            <div id="slider" style="width:20%"></div>
+            <br>
+            <div id ="desc">2 Hour Average by Year</div>
+            <br>
+
+            <input type="checkbox" id="checkb">Disable view by Year</input>
+            <select id="CountSites" name="countsites" class="form-control" style="width:200px">
+              <option></option>
+            </select>
+
+        </td>
+     </tr>
+</table>
+
+<!--input type="button" id="button" value="Click to open the dialog"-->
+	<div id="dialog" title="Dialog">
+        <div id="results"></div>
+        <canvas id="myChart" height="250" width="250"></canvas>
+        <canvas id="myPieChart" height="200"></canvas>
+        <div id="pielegend"></div>
+	</div>
+    
+</body>
+</html>
